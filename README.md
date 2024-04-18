@@ -1,2 +1,2 @@
 # MFMS
-This is our 2nd year project
+Lets complete our project!
