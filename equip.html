@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equip materials</title>
+    <!-- background image-->
+    <style>
+        .back{
+            background-image:url(https://images.freecreatives.com/wp-content/uploads/2016/04/Solid-Black-Website-Background.jpg) ;
+            min-height: 600px;
+           
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+       .text{
+        background-color: rgba(234, 237, 240, 0.5);
+            font-size: 30px;
+            font-weight: bold;
+            padding: 10px;
+            color: rgb((209, 171, 171)33, 225, 225);
+            text-align: center;
+            display: block;
+            
+       }
+    </style>
+<!-- end of the back img-->
+
+    <!--css for the input-->
+    <style>
+        /* Style all input fields */
+        input {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+        }
+        
+        /* Style the submit button */
+        input[type=submit] {
+          background-color: #04AA6D;
+          color: white;
+        }
+        
+        /* Style the container for inputs */
+        .container {
+          background-color: #f1f1f1;
+          padding: 20px;
+        }
+        
+        /* The message box is shown when the user clicks on the password field */
+        #message {
+          display:none;
+          background: #f1f1f1;
+          color: #fcf9f9;
+          position: relative;
+          padding: 20px;
+          margin-top: 10px;
+        }
+        
+        #message p {
+          padding: 10px 35px;
+          font-size: 18px;
+        }
+        
+        /* Add a green text color and a checkmark when the requirements are right */
+        .valid {
+          color: green;
+        }
+        
+        .valid:before {
+          position: relative;
+          left: -35px;
+          content: "✔";
+        }
+        
+        /* Add a red text color and an "x" when the requirements are wrong */
+        .invalid {
+          color: red;
+        }
+        
+        .invalid:before {
+          position: relative;
+          left: -35px;
+          content: "✖";
+        }
+        </style>
+        <!--end for the input -->
+
+        <!-- css for the catogory-->
+         <style>
+            .cato{
+            display: flex;
+            }
+            .cato>div{
+            
+              width: 100px;
+              margin: 5px;
+              text-align: center;
+              line-height: 70px;
+              font-size: 12px;
+            }
+            .dropbtn {
+              background-color: #04AA6D;
+              color: white;
+              padding: 15px;
+              font-size: 25px;
+              border: none;
+            }
+            .drop {
+              background-color: #04AA6D;
+              color: white;
+              padding: 15px;
+              font-size: 25px;
+              border: none;
+            }
+            .room {
+              background-color: #04AA6D;
+              color: white;
+              padding: 15px;
+              font-size: 25px;
+              border: none;
+            }
+            
+            .dropdown {
+              position: relative;
+              display: inline-block;
+            }
+            
+            .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: #f1f1f1;
+              min-width: 100px;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              z-index: 1;
+            }
+            
+            .dropdown-content a {
+              color: black;
+              padding: 10px 14px;
+              text-decoration: none;
+              display: block;
+            }
+            
+            .dropdown-content a:hover {background-color: #ddd;}
+            
+            .dropdown:hover .dropdown-content {display: block;}
+            
+            .dropdown:hover .dropbtn {background-color: #3e8e41;}
+            
+            .dropdown-content a:hover {background-color: #ddd;}
+            
+            .dro:hover .dropdown-content {display: block;}
+            
+            .dro:hover .drop {background-color: #3e8e41;}
+            
+            .dropdown-content a:hover {background-color: #ddd;}
+            
+            .dr:hover .dropdown-content {display: block;}
+            
+            .dr:hover .room {background-color: #3e8e41;}
+            </style>
+            <!-- end of the catogry css -->
+        
+</head>
+<body>
+<div class="back">
+    <div class="text"> <h3>WELCOME TO THE </h3><h1>MFMS</h1></div>
+
+<div class="container">
+    <form action="/action_page.php">
+      
+  
+      <label for="psw">Student id</label>
+      <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="please fill up your student id " required>
+      
+      
+      <label for="usrphn">Phone number</label>
+      <input type="number" id="usrphn" name="usrphn" required>
+      
+      <label> Choose the category</label>        
+        <div class="cato">
+        <div class="dropdown">
+          <button class="dropbtn">Music</button>
+          <div class="dropdown-content">
+            <a href="p.html">Piano</a>
+          
+        
+            <a href="guitar.html" >Guitar</a>
+        
+            <a href="sp.html" >Speaker</a>
+           
+          </div>
+          </div>
+          <br><br>
+          <div class="dro">
+          <button class="drop">Sports</button>
+          <div class="dropdown-content">
+            <a href="basketball.html">Basketball</a>
+            <a href="volleybal.html">volleyball</a>
+            <a href="football.html">football</a>
+          </div>
+        </div>
+         <br><br>
+          <div class="dr">
+          <button class="room">Room</button>
+          <div class="dropdown-content">
+            <a href="hall.html">Hall</a>
+            <a href="lab1.html">Lab1</a>
+            <a href="lab2.html">Lab2</a>
+            
+            
+          </div>
+        </div>
+        </div>
+        </div>
+<input type="submit" value="Send">
+    </form>
+  
+  
+  <div id="message">
+    <h3>student is should be your own ID</h3>
+  </div>
+                  
+ <!-- <script>
+  var myInput = document.getElementById("psw");
+  var letter = document.getElementById("letter");
+  var capital = document.getElementById("capital");
+  var number = document.getElementById("number");
+  var length = document.getElementById("length");
+  
+  // When the user clicks on the password field, show the message box
+  myInput.onfocus = function() {
+    document.getElementById("message").style.display = "block";
+  }
+  
+  // When the user clicks outside of the password field, hide the message box
+  myInput.onblur = function() {
+    document.getElementById("message").style.display = "none";
+  }
+  
+  // When the user starts to type something inside the password field
+  myInput.onkeyup = function() {
+    // Validate lowercase letters
+    var lowerCaseLetters = /[a-z]/g;
+    if(myInput.value.match(lowerCaseLetters)) {  
+      letter.classList.remove("invalid");
+      letter.classList.add("valid");
+    } else {
+      letter.classList.remove("valid");
+      letter.classList.add("invalid");
+    }
+
+  
+    // Validate numbers
+    var numbers = /[0-9]/g;
+    if(myInput.value.match(numbers)) {  
+      number.classList.remove("invalid");
+      number.classList.add("valid");
+    } else {
+      number.classList.remove("valid");
+      number.classList.add("invalid");
+    }
+    
+    // Validate length
+    if(myInput.value.length >= 8) {
+      length.classList.remove("invalid");
+      length.classList.add("valid");
+    } else {
+      length.classList.remove("valid");
+      length.classList.add("invalid");
+    }
+  }
+  </script>	-->
+  </div>		
+</body>
+</html>
