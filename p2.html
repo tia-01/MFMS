@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" >
+
+    <title>project-II Student</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><h5>Home</h5></a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" style="color:black;">
+                Manage Materials
+            </a>
+            <ul class="dropdown-menu" >
+                <li><a class="dropdown-item" href="#">Equiped Materials</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Available Materials</a></li>
+            </ul>
+        </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="transfer.html">Transfer</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+        <div class="container d-flex justify-content-center mt-mb-5 py-5">
+          <form>
+            <div class="form-group">
+              <label for="text"><b><h4>GU-ID</h4></b></label>
+              <input type="GU-ID" class="form-control" id="text" aria-describedby="id" placeholder=" auto fills up after student login or sign up">
+            </div>
+            <div class="form-group-hover">
+              <label for="text"><b><h4>Name</h4></label></b></label>
+              <input type="Name" class="form-control" id="text" placeholder="auto fills up after student login or sign up">
+            </div>
+          </form>
+        </div>
+        <footer class="bg-light py-3">
+          <div class="container text-center">
+            <p>&copy; 2023 Material Flow Management System. All rights reserved.</p>
+          </div>
+        </footer>         
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript">  
+      function validate(){  
+      var name=document.f1.name.value;  
+      var passwordlength=document.f1.password.value.length;  
+      var status=false;  
+      if(name==""){  
+      document.getElementById("namelocation").innerHTML=  
+      " <img src='http://www.javatpoint.com/javascriptpages/images/unchecked.gif'/> Please enter your name";  
+      status=false;
+      }else{  
+      document.getElementById("namelocation").innerHTML=" <img src='http://www.javatpoint.com/javascriptpages/images/checked.gif'/>";  
+      status=true;
+      }  
+        
+      if(passwordlength<6){  
+      document.getElementById("passwordlocation").innerHTML=  
+      " <img src='http://www.javatpoint.com/javascriptpages/images/unchecked.gif'/> Password must be greater than 6";  
+      status=false; 
+      }else{  
+      document.getElementById("passwordlocation").innerHTML=" <img src='http://www.javatpoint.com/javascriptpages/images/checked.gif'/>";  
+      }  
+        
+      return status;  
+      }  
+      </script>   
+      
+  </body>
+</html>
