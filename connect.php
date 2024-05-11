@@ -1,22 +1,27 @@
 <?php
-
-include 'connection.php'
+session_start();
+include 'conection.php';
 // Insert student record
-if (isset($_POST['addrecord'])) {
-  $name = $_POST['name'];
+if (isset($_POST['addstudent'])) {
+  $id = $_POST['id'];
   $email = $_POST['email'];
   $semester = $_POST['semester'];
   $faculty = $_POST['faculty'];
 
-  $sql = "INSERT INTO test (name, email, semester, faculty)
-  VALUES ('$name', '$email', '$semester', '$faculty')";
+  $sql = "INSERT INTO test (id, email, semester, faculty) VALUES ('$id', '$email', '$semester', '$faculty')";
 
-  if ($conn->query($sql) === TRUE) {
-    echo "New student record created successfully";
-  } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+  if($conn->query($sql)){
+    $_SESSION['success']='student added successfully';
+    
+  }
+  else{
+    $_SESSION['error']=$conn->error ;
+
   }
 }
+else{
+  $_SESSION['error'] = 'Fill Form First';
+}
+header("location: addstudent.php");
 
-$conn->close();
 ?>
