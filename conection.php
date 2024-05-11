@@ -5,7 +5,7 @@ $password = "";
 $dbname = "test";
 
 // Create connection
-$conn = new mysqli("$localhost", "$username", "", "$test");
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
