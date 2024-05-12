@@ -19,7 +19,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     if (users[username] && users[username] === password) {
         document.getElementById("loginStatus").textContent = "Login successful!";
         // Redirect to another page or perform additional actions after successful login
-         window.location.href = "members.html";
+         window.location.href = "studentinterface.html";
     } else {
         document.getElementById("loginStatus").textContent = "Login failed. Invalid username or password.";
     }
