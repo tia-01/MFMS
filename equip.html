@@ -4,27 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equip materials</title>
-    <!-- background image-->
-    <style>
-        .back{
-            background-image:url(https://images.freecreatives.com/wp-content/uploads/2016/04/Solid-Black-Website-Background.jpg) ;
-            min-height: 600px;
-           
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-       .text{
-        background-color: rgba(234, 237, 240, 0.5);
-            font-size: 30px;
-            font-weight: bold;
-            padding: 10px;
-            color: rgb((209, 171, 171)33, 225, 225);
-            text-align: center;
-            display: block;
-            
-       }
-    </style>
+    <!-- background image ra full -->
+   
 <!-- end of the back img-->
 
     <!--css for the input-->
@@ -166,65 +147,139 @@
             .dr:hover .room {background-color: #3e8e41;}
             </style>
             <!-- end of the catogry css -->
+
+            <!--request button-->
+            <style>
+              
+.buttonr {
+  display: inline-block;
+  border-radius: 4px;
+  background-color:#04AA6D;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.buttonr span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonr span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonr:hover span {
+  padding-right: 25px;
+}
+
+.buttonr:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+            </style>
+<!--return button-->
+<style>
+              
+  .buttont {
+    float: right;
+    border-radius: 4px;
+    background-color:#04AA6D;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .buttont span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .buttont span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .buttont:hover span {
+    padding-right: 25px;
+  }
+  
+  .buttont:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+              </style>
         
 </head>
 <body>
 <div class="back">
-    <div class="text"> <h3>WELCOME TO THE </h3><h1>MFMS</h1></div>
 
-<div class="container">
+<div class="container" id="req">
     <form action="/action_page.php">
-      
+      <label>Full name </label> 
+      <input type="text" id="name" name="stdname" required>
   
       <label for="psw">Student id</label>
-      <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="please fill up your student id " required>
+      <input type="text" id="stid" name="stdid" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="please fill up your student id " required>
       
       
       <label for="usrphn">Phone number</label>
       <input type="number" id="usrphn" name="usrphn" required>
-      
-      <label> Choose the category</label>        
-        <div class="cato">
-        <div class="dropdown">
-          <button class="dropbtn">Music</button>
-          <div class="dropdown-content">
-            <a href="p.html">Piano</a>
-          
-        
-            <a href="guitar.html" >Guitar</a>
-        
-            <a href="sp.html" >Speaker</a>
-           
-          </div>
-          </div>
-          <br><br>
-          <div class="dro">
-          <button class="drop">Sports</button>
-          <div class="dropdown-content">
-            <a href="basketball.html">Basketball</a>
-            <a href="volleybal.html">volleyball</a>
-            <a href="football.html">football</a>
-          </div>
-        </div>
-         <br><br>
-          <div class="dr">
-          <button class="room">Room</button>
-          <div class="dropdown-content">
-            <a href="hall.html">Hall</a>
-            <a href="lab1.html">Lab1</a>
-            <a href="lab2.html">Lab2</a>
+
+      <label for="usrphn">Semester</label>
+      <input type="number" id="usrsem" name="usrsem" required>
             
-            
-          </div>
-        </div>
-        </div>
-        </div>
-<input type="submit" value="Send">
+        
+        
+        <div>
+          <button class="buttonr" style="vertical-align:middle"><span> Equiped </span></button>
+          <button class="buttont" style="vertical-align:middle"><span>Return </span></button>
+</div>
+<script>
+  // Get the modal
+  var modal = document.getElementById('req');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
+
     </form>
+    </div>
   
   
   <div id="message">
-    <h3>student is should be your own ID</h3>
+    <h3>student id should be your own ID</h3>
   </div>
                   
  <!-- <script>
