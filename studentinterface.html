@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student interface</title>
+    <style>
+                * {
+              box-sizing: border-box;
+          }
+
+          body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+          }
+
+          header {
+              background-color: #0e923c;
+              color: white;
+              display: flex;
+              justify-content: left;
+              align-items: center;
+              height: 50px;
+              padding: 0 20px;
+          }
+          main {
+              padding: 20px;
+          }
+
+          main section {
+              margin-bottom: 20px;
+          }
+
+          main h2 {
+              border-bottom: 2px solid #80e691;
+              padding-bottom: 10px;
+          }
+
+          form {
+              display: flex;
+              flex-wrap: wrap;
+              margin: 20px 0;
+              padding-top: 0;
+          }
+
+          label {
+              display: block;
+              width: 100%;
+          }
+
+          select,
+          input[type="number"] {
+              flex-basis: 30%;
+              margin-bottom: 10px;
+          }
+
+          select,
+          input[type="text"] {
+              flex-basis: 30%;
+              margin-bottom: 10px;
+          }
+
+          button {
+              background-color: #b0b6bc;
+              border: none;
+              color: rgb(18, 15, 15);
+              padding: 5px 10px;
+              cursor: pointer;
+          }
+
+
+
+
+          /* CSS */
+.material {
+  padding: 20px;
+  
+}
+
+.material ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.material li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.material a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.material a:hover {
+  background-color: rgb(183, 183, 167);
+  color: #fff;
+}
+
+.material:hover ul {
+  display: block;
+}
+
+.material ul {
+  display: none;
+  position: absolute;
+  padding: 10px;
+}
+
+.material ul li {
+  display: block;
+  margin-right: 0;
+}
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Interface</h1>
+    </header>
+    <main>
+        <section id="transfer">
+          <div class="material">
+            <h2>Materials</h2>
+           <ul>
+            <li><a href="available.html">Available Material</a></li><br>
+            <li><a href="equip.html">Equiped Material</a></li><br>
+           </ul>
+         </div><br><br><br>
+            <h2>Transfer Material</h2>  
+            <form id="transfer-form">
+                  <label for="from"><h4>From:</h4></label>
+                  <input type="number" id="from" name="from" placeholder="*Student is required">
+              
+                  <label for="to"><h4>To:</h4></label>
+                  <input type="number" id="to" name="to" placeholder="*Student is required">
+      
+                  <label for="material"><h4>Material Name:</h4></label>
+                  <input type="text" id="material" name="material" placeholder="*material name is required">
+                </form>
+                <button type="submit">Transfer</button>
+                
+            </form>
+
+
+
+        </section>   
+    </main>
+  
+    <script>
+      function validateForm() {
+          var from = document.getElementById("from").value;
+          var to = document.getElementById("to").value;
+          var material = document.getElementById("material").value;
+
+          if (from.trim() === "" || to.trim() === "" || material.trim() === "") {
+              alert("All fields are required!");
+              return false;
+          }
+          return true;
+      }
+  </script>
+  
+</body>
+</html>
