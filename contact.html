@@ -1,0 +1,267 @@
+<html>
+
+<head>
+
+        <meta charset="UTF-8">
+
+        <title>Contact Us</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+
+        <style type="text/css">
+
+              body {
+
+                height: 99vh;
+
+               
+
+                display: flex;
+
+                justify-content: center;
+
+                align-items: center;
+
+                font-weight: bold;
+
+            }
+
+ 
+
+            .formBox {
+
+                padding: 15px;
+
+                text-align: center;
+
+                display: flex;
+
+                flex-direction: column;
+
+                background: #e5e6eb;
+
+                border-radius: 30px;
+
+               
+
+ 
+
+            }
+
+            h2 {
+
+                margin-bottom: -10px;
+
+            }
+
+ 
+
+            p {
+
+                font-weight: 500;
+
+                font-size: 1.1em;
+
+            }
+
+            form {
+
+                padding: 10px;
+
+            }
+
+ 
+
+            form>div {
+
+                padding: 10px;
+
+                position: relative;
+
+                font-size: 1.3em;
+
+            }
+
+ 
+
+            form>div i {
+
+                position: absolute;
+
+                top: 22px;
+
+                margin-left: 10px;
+
+                opacity: 0.6;
+
+            }
+
+ 
+
+            form>div input {
+
+                height: 2em;
+
+                width: 70vw;
+
+                padding-left: 40px;
+
+                font-size: 1em;
+
+                border-radius: 20px;
+
+                outline: none;
+
+                border: 1px solid #b5adad;
+
+                background-color: #f1f1f1;
+
+            }
+
+ 
+
+           
+
+ 
+
+           
+
+ 
+
+            textarea {
+
+                border: none;
+
+                width: 70vw;
+
+                border-radius: 20px;
+
+                padding: 10px;
+
+                outline: none;
+
+                font-size: 1em;
+
+            }
+
+ 
+
+            button {
+
+                width: 50%;
+
+                height: 5vh;
+
+                color: #ffffff;
+
+                background:  #04661c;
+
+                outline: none;
+
+                border: none;
+
+                border-radius: 10px;
+
+                cursor: pointer;
+
+                font-size: 0.8em;
+
+            }
+
+ 
+
+           
+
+                form>div input {
+
+                    width: 50vw;
+
+                }
+
+ 
+
+                textarea {
+
+                    width: 50vw;
+
+                }
+
+ 
+
+            </style>
+
+</head>
+
+<body>
+
+        <div class="formBox">
+
+            <h2>Contact Us</h2>
+
+            <form action="http://127.0.0.1:5500/html/tfc.html">
+
+                <div class="nameInp">
+
+                    <i class="fa fa-user icon"></i>
+
+                    <input type="text" placeholder="Full Name" name="name" id="name" required>
+
+ 
+
+                </div>
+
+                <div class="mail">
+
+                    <i class="fa fa-envelope"></i>
+
+                    <input type="email" name="mail" id="mail" placeholder="Email" required>
+
+                </div>
+
+                <div class="phone">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <input type="number" name="phone" id="phone" placeholder="Phone" min="9800000000" max="99999999999">
+
+                </div>
+
+                <div class="query">
+
+                    <textarea name="query" id="query" cols="30" rows="5"
+
+                        placeholder="Any comment or your query"></textarea>
+
+                </div>
+
+                <div class="submitBtn">
+
+                    <button id="btn" onclick="notif()" >Send</button>
+
+                </div>
+
+            </form>
+
+            <p >You can also contact us at +977-9812345678</p>
+
+        </div>
+
+       
+
+    <script>
+
+    function notif(){
+
+        const req=document.querySelector('required');
+
+        if (required)
+
+alert("Your query has been submitted successfully");
+
+    }
+
+    </script>
+
+    </body>
+
+    </html>

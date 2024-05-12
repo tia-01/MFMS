@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border-color: solid black;
+  text-align: left;
+ 
+  border-width:2px;
+  outline: none;
+  font-size: 25px;
+}
+
+.active, .collapsible:hover {
+  background-color:white;
+  color:black;
+  border-style: solid;
+    border-color:white ;
+    border-width: 3px;
+}
+
+.content {
+
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  font-size:20px;
+}
+.collapsible{
+  background-color:grey;
+  border-width: 3px;
+}
+.fa{
+    margin-left: 5%;
+    margin-right: 5%;
+   
+
+}
+h2{
+    font-size: 40px;
+}
+</style>
+</head>
+<body>
+
+<h2>FAQS</h2>
+
+<br><br>
+<div class="fa">
+<button type="button" class="collapsible">What is a materials flow management system?</button>
+<div class="content">
+  <p>A materials flow management system is a software solution that helps companies effectively manage the movement of materials within their supply chain. It provides real-time visibility and control over inventory levels, streamlines processes, and optimizes the flow of materials from suppliers to production facilities to customers.</p>
+</div>
+
+
+<button type="button" class="collapsible">What are the benefits of implementing a materials flow management system?</button>
+<div class="content">
+  <p>Implementing a materials flow management system offers several benefits, including improved inventory management, reduced carrying costs, minimized stockouts, enhanced operational efficiency, increased customer satisfaction, and better decision-making through accurate and timely data analysis.</p>
+</div>
+
+<button type="button" class="collapsible">How does a materials flow management system work?</button>
+<div class="content">
+  <p> A materials flow management system typically integrates with various systems within a company, such as ERP (Enterprise Resource Planning) and WMS (Warehouse Management System). It utilizes data from these systems, along with real-time tracking technologies like RFID or barcodes, to provide visibility into the movement of materials. The system then uses algorithms and optimization techniques to suggest the most efficient routes, minimize delays, and ensure timely delivery.</p>
+</div>
+<button type="button" class="collapsible">How long does it take to implement a materials flow management system?</button>
+<div class="content">
+  <p>The implementation timeline of a materials flow management system can vary depending on factors such as the complexity of the supply chain, the size of the organization, and the level of customization required. On average, it can take several weeks to a few months to fully implement and integrate the system into existing processes.</p>
+</div>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
