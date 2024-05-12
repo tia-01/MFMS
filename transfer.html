@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transfer Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+  .padding{
+    padding-left:240px;
+  }
+</style>
+</head>
+<body>
+  <header class="my-4 padding">
+    <h1>Transfer</h1>
+  </header>
+
+  <main class="container">
+    <form id="transferForm" action="transfer.php" method="post">
+      <div class="form-group">
+        <label for="studentIdFrom">Student-ID:</label>
+        <input type="text" class="form-control" id="studentIdFrom" name="studentIdFrom" required aria-label="Student-ID From">
+      </div>
+
+      <div class="form-group">
+        <label for="semesterIdFrom">Semester:</label>
+        <input type="text" class="form-control" id="semesterIdFrom" name="semesterIdFrom" required aria-label="Semester From">
+      </div>
+      TO<br> <br>
+      <div class="form-group">
+        <label for="studentIdTo">Student-ID:</label>
+        <input type="text" class="form-control" id="studentIdTo" name="studentIdTo" required aria-label="Student-ID To">
+      </div>
+
+      <div class="form-group">
+        <label for="semesterIdTo">Semester:</label>
+        <input type="text" class="form-control" id="semesterIdTo" name="semesterIdTo" required aria-label="Semester To">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Transfer</button>
+    </form>
+
+    <div id="alert" class="alert alert-success mt-3" style="display:none;">
+      Transferred
+    </div>
+  </main>
+
+  <script>
+    const form = document.getElementById('transferForm');
+    const alert = document.getElementById('alert');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Perform the transfer logic here
+
+      // Display the alert message
+      alert.style.display = 'block';
+
+      // Reset the form
+      form.reset();
+
+      // Hide the alert message after 3 seconds
+      setTimeout(() => {
+        alert.style.display = 'none';
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
