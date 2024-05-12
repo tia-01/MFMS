@@ -1,61 +1,149 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student interface</title>
+    <style>
+                * {
+              box-sizing: border-box;
+          }
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+          body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+          }
 
-    <title>Student Interface</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-success">
-      <a class="navbar-brand" href="#" style="font-family: 'papyrus', fantasy;">
-        <b>MFMS</b></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto" >
-            <li class="nav-item active" style="font-weight: bold;">
-            <a class="nav-link" href="#"><h4></h4><span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item dropdown" style="font-weight: bold;">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <h4>Manage material</h4></a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#"><h5>Available materials</h5></a>
-              <a class="dropdown-item" href="Eqiped.html"><h5>Equiped materials</h5></a>
-             </div>
-          </li>
-          <li class="nav-item" style="font-weight: bold;">
-            <a class="nav-link disabled" href="transfer.html"><h4>Transfer</h4></a>
-          </li>
-    </nav>
-    <div class="container d-flex justify-content-center mt-mb-ml-mr5 py-5">
-        <!-- <form>
-          <div class="form-group">
-            <label for="text"><b><h4>GU-ID</h4></b></label>
-            <input type="GU-ID" class="form-control" id="text" aria-describedby="id" placeholder=" auto fills up after student login or sign up">
-          </div>
-          <div class="form-group-hover">
-            <label for="text"><b><h4>Name</h4></label></b></label>
-            <input type="Name" class="form-control" id="text" placeholder="auto fills up after student login or sign up">
-          </div>
-        </form> -->
-      </div>
-      <div class="fixed-bottom">
-      <footer class="bg-light py-3">
-        <div class="container text-center">
-          <p>&copy; 2023 Material Flow Management System. All rights reserved.</p>
-        </div>
-      </footer>
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+          header {
+              background-color: #0e923c;
+              color: white;
+              display: flex;
+              justify-content: left;
+              align-items: center;
+              height: 50px;
+              padding: 0 20px;
+          }
+          main {
+              padding: 20px;
+          }
+
+          main section {
+              margin-bottom: 20px;
+          }
+
+          main h2 {
+              border-bottom: 2px solid #80e691;
+              padding-bottom: 10px;
+          }
+
+          form {
+              display: flex;
+              flex-wrap: wrap;
+              margin: 20px 0;
+              padding-top: 0;
+          }
+
+          label {
+              display: block;
+              width: 100%;
+          }
+
+          select,
+          input[type="number"] {
+              flex-basis: 30%;
+              margin-bottom: 10px;
+          }
+
+          select,
+          input[type="text"] {
+              flex-basis: 30%;
+              margin-bottom: 10px;
+          }
+
+          button {
+              background-color: #b0b6bc;
+              border: none;
+              color: rgb(18, 15, 15);
+              padding: 5px 10px;
+              cursor: pointer;
+          }
+
+            .nav-item.dropdown:hover .dropdown-menu {
+              display: block;
+            }
+
+            .nav-item.dropdown .dropdown-menu {
+              display: none;
+              position: absolute;
+              top: 100%;
+              left: 0;
+              width: 100%;
+              border: none;
+              border-radius: 0 0 5px 5px;
+              box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+              background-color: #fff;
+            }
+
+            .nav-item.dropdown .dropdown-menu a {
+              display: block;
+              padding: 10px 20px;
+              color: #333;
+              text-decoration: none;
+              transition: background-color 0.3s;
+            }
+
+            .nav-item.dropdown .dropdown-menu a:hover {
+              background-color: #f5f5f5;
+            }
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Interface</h1>
+    </header>
+    <main>
+        <section id="transfer">
+          <h2>Transfer Material</h2>  
+            <form id="transfer-form">
+                  <label for="from"><h4>From:</h4></label>
+                  <input type="number" id="from" name="from" placeholder="*Student is required">
+              
+                  <label for="to"><h4>To:</h4></label>
+                  <input type="number" id="to" name="to" placeholder="*Student is required">
+      
+                  <label for="material"><h4>Material Name:</h4></label>
+                  <input type="text" id="material" name="material" placeholder="*material name is required">
+                </form>
+                <button type="submit">Transfer</button>
+            </form>
+            <nav>
+              <ul class="nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <h4>Manage material</h4>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">
+                      <h5>Available materials</h5>
+                    </a>
+                    <a class="dropdown-item" href="Eqiped.html">
+                      <h5>Equiped materials</h5>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+        </section>   
+        
+    </main>
+  
+</body>
 </html>
