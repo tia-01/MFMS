@@ -17,7 +17,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     if (users[username] && users[username] === password) {
         document.getElementById("loginStatus").textContent = "Login successful!";
         // Redirect to another page or perform additional actions after successful login
-         window.location.href = "admin.html";
+         window.location.href = "http://localhost/projectmfms/admin.php";
     } else {
         document.getElementById("loginStatus").textContent = "Login failed. Invalid username or password.";
     }
