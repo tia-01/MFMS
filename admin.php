@@ -238,7 +238,7 @@ border-radius: 15px;
                 <span class="counter-value" id="cv-2">
                 <?php
         include 'connection1.php';
-        $sql = "SELECT * FROM mfms WHERE sid IS NOT NULL AND sname IS NOT NULL";
+        $sql = "SELECT * FROM equipmaterial";
         $result = $conn->query($sql);
         // $num_records = $result->num_rows; 
         if ($result->num_rows > 0) {
