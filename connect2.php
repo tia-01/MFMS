@@ -7,8 +7,8 @@ if (isset($_POST['equipmaterial'])) {
   $pid = $_REQUEST['pid'];
 
 
-  // $sql = "INSERT INTO equipmaterial (sname, sid, pid) VALUES ('$sname','$sid', '$pid')";
-$sql = "UPDATE mfms SET sid = '$sid', sname = '$sname' WHERE pid = '$pid'";
+  $sql = "INSERT INTO equipmaterial (sname, sid, pid) VALUES ('$sname','$sid', '$pid')";
+// $sql = "UPDATE mfms SET sid = '$sid', sname = '$sname' WHERE pid = '$pid'";
 
   if($conn->query($sql)){
     $_SESSION['success']= 'material equipped successfully';
