@@ -3,165 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>student interface</title>
+    <title>Student Interface</title>
     <style>
-                * {
-              box-sizing: border-box;
-          }
+        * {
+            box-sizing: border-box;
+        }
 
-          body {
-              font-family: Arial, sans-serif;
-              margin: 0;
-              padding: 0;
-          }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-          header {
-              background-color: #0e923c;
-              color: white;
-              display: flex;
-              justify-content: left;
-              align-items: center;
-              height: 50px;
-              padding: 0 20px;
-          }
-          main {
-              padding: 20px;
-          }
+        header {
+            background-color: #0e923c;
+            color: white;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            height: 50px;
+            padding: 0 20px;
+        }
 
-          main section {
-              margin-bottom: 20px;
-          }
+        main {
+            padding: 30px;
+        }
 
-          main h2 {
-              border-bottom: 2px solid #80e691;
-              padding-bottom: 10px;
-          }
+        main section {
+            margin-bottom: 20px;
+        }
 
-          form {
-              display: flex;
-              flex-wrap: wrap;
-              margin: 20px 0;
-              padding-top: 0;
-          }
+        main h2 {
+            border-bottom: 3px solid #80e691;
+            padding-bottom: 10px;
+        }
 
-          label {
-              display: block;
-              width: 100%;
-          }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            padding-top: 0;
+        }
 
-          select,
-          input[type="number"] {
-              flex-basis: 30%;
-              margin-bottom: 10px;
-          }
+        label {
+            display: block;
+            width: 100%;
+            height: 60px; /* Increased label height */
+        }
 
-          select,
-          input[type="text"] {
-              flex-basis: 30%;
-              margin-bottom: 10px;
-          }
+        select,
+        input[type="number"],
+        input[type="text"] {
+            flex-basis: 30%;
+            margin-bottom: 10px;
+            height: 30px;
+        }
 
-          button {
-              background-color: #b0b6bc;
-              border: none;
-              color: rgb(18, 15, 15);
-              padding: 5px 10px;
-              cursor: pointer;
-          }
+        button {
+            background-color: #b0b6bc;
+            border: none;
+            color: rgb(18, 15, 15);
+            padding: 5px 10px;
+            cursor: pointer;
+        }
 
+        /* CSS */
+        .material {
+            padding: 20px;
+        }
 
+        .material ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
+        .material li {
+            display: inline-block;
+            margin-right: 30px;
+        }
 
-          /* CSS */
-.material {
-  padding: 20px;
-  
-}
+        .material a {
+            text-decoration: none;
+            color: #337ab7;
+        }
 
-.material ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+        .material a:hover {
+            background-color: rgb(183, 183, 167);
+            color: #fff;
+        }
 
-.material li {
-  display: inline-block;
-  margin-right: 30px;
-}
+        .material:hover ul {
+            display: block;
+        }
 
-.material a {
-  text-decoration: none;
-  color: #337ab7;
-}
+        .material ul {
+            display: none;
+            position: absolute;
+            padding: 10px;
+        }
 
-.material a:hover {
-  background-color: rgb(183, 183, 167);
-  color: #fff;
-}
+        .material ul li {
+            display: block;
+            margin-right: 0;
+        }
 
-.material:hover ul {
-  display: block;
-}
+        #success-message {
+            padding: 10px; 
+            border-radius: 5px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            margin-top: 20px;
+        }
+        
 
-.material ul {
-  display: none;
-  position: absolute;
-  padding: 10px;
-}
-
-.material ul li {
-  display: block;
-  margin-right: 0;
-}
-       
     </style>
 </head>
 <body>
-    <header>
-        <h1>Student Interface</h1>
-    </header>
-    <main>
-        <section id="transfer">
-          <div class="material">
+<header>
+    <h1>Student Interface</h1>
+</header>
+<main>
+    <section id="transfer">
+        <div class="material">
             <h2>Materials</h2>
-           <ul>
-            <li><a href="available.html">Available Material</a></li><br>
-            <li><a href="equip.html">Equiped Material</a></li><br>
-           </ul>
-         </div><br><br><br>
-            <h2>Transfer Material</h2>  
-            <form id="transfer-form">
-                  <label for="from"><h4>From:</h4></label>
-                  <input type="number" id="from" name="from" placeholder="*Student is required">
-              
-                  <label for="to"><h4>To:</h4></label>
-                  <input type="number" id="to" name="to" placeholder="*Student is required">
-      
-                  <label for="material"><h4>Material Name:</h4></label>
-                  <input type="text" id="material" name="material" placeholder="*material name is required">
-                </form>
-                <button type="submit">Transfer</button>
-                
-            </form>
+            <ul>
+                <li><a href="available.html">Available Material</a></li><br>
+                <li><a href="equip.html">Equipped Material</a></li><br>
+            </ul>
+        </div><br><br><br>
+        <h2>Transfer Material</h2>
+        <form id="transfer-form">
+            <label for="from"><h4>From:</h4></label>
+            <input type="number" id="from" name="from" placeholder="*Student-ID is required">
 
+            <label for="to"><h4>To:</h4></label>
+            <input type="number" id="to" name="to" placeholder="*Student-ID is required">
 
+            <label for="material"><h4>Material Name:</h4></label>
+            <input type="text" id="material" name="material" placeholder="*material name is required">
+        </form>
+            <button type="button" onclick="validateAndSubmit()">Transfer</button>
+        
+        <div id="success-message"></div> <!-- New div for success message -->
+    </section>
+</main>
 
-        </section>   
-    </main>
-  
-    <script>
-      function validateForm() {
-          var from = document.getElementById("from").value;
-          var to = document.getElementById("to").value;
-          var material = document.getElementById("material").value;
+<script>
+    function validateAndSubmit() {
+        var from = document.getElementById("from").value;
+        var to = document.getElementById("to").value;
+        var material = document.getElementById("material").value;
 
-          if (from.trim() === "" || to.trim() === "" || material.trim() === "") {
-              alert("All fields are required!");
-              return false;
-          }
-          return true;
-      }
-  </script>
-  
+        if (from.trim() === "" || to.trim() === "" || material.trim() === "") {
+            alert("All fields are required!");
+        } else if (isNaN(from) || isNaN(to)) {
+            alert("From and To fields must be numbers!");
+        } else {
+           
+            var successDiv = document.getElementById("success-message");
+            successDiv.innerHTML = "<p>Transfered successfully!</p>";
+            
+            document.getElementById("transfer-form").reset();
+           
+            successDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    }
+</script>
+
 </body>
 </html>
