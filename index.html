@@ -499,14 +499,62 @@ span.psw {
       
     </style>
     <!--stds ra admin log in page ko -->
+      <style>
+      
+#currentTime {
+font-size: 5em;
+text-align: center;
+font-family: sans-serif;
+font-weight: 50;
+color: #0e0d0d;
+}
+.clo{
+  font-size: xx-small;
+}
+  </style>
 
 </head>
   <body>
     <!-- navbar  -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
+<div class="ic">
+      <div>
         <a class="navbar-brand" href="#"><img src="https://www.gandakiuniversity.edu.np/wp-content/uploads/2023/01/logo-gu-new.png" alt="" width="250" height="50"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        </div>
+        <div class="clo"><h1 id="currentTime"></h1>
+          <script>window.onload = function() {
+              clock();  
+                function clock() {
+                var now = new Date();
+                var TwentyFourHour = now.getHours();
+                var hour = now.getHours();
+                var min = now.getMinutes();
+                var sec = now.getSeconds();
+                var mid = 'pm';
+                if(sec < 10) { 
+                  sec = "0" + sec; 
+                }
+                if (min < 10) {
+                  min = "0" + min;
+                }
+                if (hour > 12) {
+                  hour = hour - 12;
+                }   
+                if (hour < 10 ) {
+                  hour = "0" + hour;
+                }   
+                if(hour==0){ 
+                  hour=12;
+                }
+                if(TwentyFourHour < 12) {
+                   mid = 'am';
+                }
+              document.getElementById('currentTime').innerHTML =     hour+':'+min+':'+sec +' '+mid ;
+                setTimeout(clock, 1000);
+                }
+            }
+            </script></div></div>        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="top">
